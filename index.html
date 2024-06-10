@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD Projekt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Reenie+Beanie&family=Road+Rage&family=Rock+3D&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Reenie+Beanie&family=Rock+3D&display=swap"
+        rel="stylesheet">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poller+One&family=Rubik+Glitch&family=Rubik+Scribble&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+</head>
+
+<body>
+    <div id="bike-wrapper">
+        <lottie-player class="bike" id="bikeLottie"
+            src="https://lottie.host/1477a825-7d4f-4c39-8530-a2174f5cd0ab/wRtq1xtKm9.json" background="transparent"
+            speed="1" loop autoplay></lottie-player>
+    </div>
+    <div id="bike-top-wrapper">
+        <img id="bike-top" src="./img/bike_top.png">
+    </div>
+    <div class="container">
+
+        <div class="wrapper">
+            <div class="slide">
+                <div id="street-top">
+                    <svg width="100%" height="100%">
+                        <!-- Linke Straßenlinie -->
+                        <line x1="10%" y1="0" x2="10%" y2="1000" stroke="white" stroke-width="4" />
+
+                        <!-- Rechte Straßenlinie -->
+                        <line x1="90%" y1="0" x2="90%" y2="1000" stroke="white" stroke-width="4" />
+
+                        <!-- Mittellinie (gestrichelt) -->
+                        <line x1="50%" y1="0" x2="50%" y2="1000" stroke="white" stroke-width="10"
+                            stroke-dasharray="100" />
+                    </svg>
+                </div>
+                <h1 class="start">Lets go for a ride.</h1>
+                <p>Das Fahrrad - Warum das Fahrrad mein Lieblingsort ist. Eine kurze Erklärung am Beispiel des
+                    Bikepackings.</p>
+                <div id="street">
+                    <svg width="100%" height="250">
+
+                        <line x1="0" y1="25" x2="100%" y2="25" stroke="white" stroke-width="4" />
+
+                        <!-- Rechte Straßenlinie -->
+                        <line x1="0" y1="225" x2="100%" y2="225" stroke="white" stroke-width="4" />
+
+                        <!-- Mittellinie (gestrichelt) -->
+                        <line x1="0" y1="125" x2="100%" y2="125" stroke="white" stroke-width="10"
+                            stroke-dasharray="100" />
+                    </svg>
+                </div>
+
+
+            </div>
+            <div class="slide" id="city">
+                <img id="map-top-city" src="./img/map-top-city.png">
+                <h1 class="city">In der Stadt.</h1>
+                <p>Weil das Fahrrad einen auch in den vollsten Städten sicher von A nach B bringt.</p>
+            
+                <svg class="img-city" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 739.42 150.67">
+                    <defs>
+                        <style>
+                            .city {
+                                fill: #a5bfbe;
+                            }
+                        </style>
+                    </defs>
+                    <g class="Layer_2" data-name="Layer 2">
+                        <g id="objects">
+                            <path class="city"
+                                d="M0,150.67V54.33H7.67V42.67H20V54H32.67v89.33H43v-24H56V112H69.33v6.33h5.34V106H96V98.67h8.67V105H110V65.33h5.67V49L119,46.33,122.67,49V63.33h3.66V55.67h16.09V63.5h4.5V131h2.25V76.75h10.25V66.5h15.5v8.25h2.5V145.5h38.75V133h3V18.75h4V14.5h7.5V0h8.75V2h5.75V13.75h4v91h8.25v-7h9.25V94h16.25v47.25h8.75V88.75h10.5V80h14.5v7.25h4.25V145.5h8V63.25h9V51h15.5V62.25h2.5V105.5h6.5V87.75h6.75V76.5l4.5-2.75,3.75,2.75v10h13v25.25h3v-64h28.25V140.5h10V119h5.75V104.75h5.25V94h10.75v11.5h11.75v38.75h5.75V87.75h27.5v56.5h10v-124h12.25V1h14V19.75h3.25V144.5h2.5V88h30.5v53h9.5v-8.75h16.5v4h12.25v11h5.25V87L623,78.38h15.63V129h6.75v9.5h35.75v7h5.25V118.75h13.75v-7h13.75V117h5.5V61.75h6.75v-5.5h13.25v93.5S.08,150.58,0,150.67Z" />
+                        </g>
+                    </g>
+                </svg>
+                <div id="color-block"></div>
+                <div id="color-block-down"></div>
+                <dotlottie-player onclick="openCanvas()" class="lottie-arrow"
+                    src="https://lottie.host/9939512b-2bf8-485c-8de2-f85f340ec850/SrdiUni5Uz.json" background="transparent"
+                    speed="1" loop autoplay></dotlottie-player>
+                <button onClick="openCanvas()" class="btn-lable open-canvas"> Klick mich! </button>
+                </a>
+            </div>
+            <div class="slide">
+                <img id="map-top-drunk" src="./img/map-top-drunk.png">
+                <h1 class="drunk">Auf dem Heimweg.</h1>
+                <p>Nach langen Tagen auf dem Sattel, bringt es einen auch noch vom Restaurant zurück nach Hause.</p>
+
+                <svg class="img-drunk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 167.38">
+                    <defs>
+                        <style>
+                            .drunk {
+                                fill: #3f4f51;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="objects">
+                            <path class="drunk"
+                                d="M740,167.38V120h-1.88V89.62h-3.37V81.88h-8.5V62.38h-5.63V49.62h3V46.75H703.37V27.62h-6V20h2V7.5l-4.12-3-5.13,3.12v12.5h2.25v7.5h-5.25V14.38h-14.5V27.62H669v74.13H648.5v26.5h-5.38v6.5H632.75v-28h-2.63v-5.87h-8.87v5.74H617.5v-3h-1.75V100l-3.88-2.25-3.5,1.75-3-1.75-3.25,1.37v7.76H600.5v28.24h-2.13V120.5h-2.75v-31h-3.25V82.75h-12v6.87H568.12v48H562.5v-17.5h-2.25V89.5h-4V82.88h-3.63V78.25l-3.12-1.63-3.88,1.76v3.5H541.5V89.5h-7.25v1.75h-3v15.5h-2.63V26.5h-4.25V23.12h-9.75V14.38h-5.5V9l-4.5-2.38-4.5,2.26v3.24h-4.37V23.88h-4.88v49.5h-9.62v8h-7.63V71.75L455.87,82.38h-4.25v28H442.5v2.87h-5v6.13h-3.38v-5.76h-11v21.13H420.5V107h-1.88V89.62H416.5V77.12L413,72.5V64.12l-3.25-1.62-3.63,2v8l-2.5,4.75V69H391v8.12h-1.75v29.63h-2v13.13h-2.63V106.75h-1.37V89.5h-3.38V83.12H367.5V89.5l-12.25-.12V98l-2.13,1.38v7.37h-6.24V45.5h-3V34.88H332v10.5H319.62v62.5H315.5V64.25h1.12V61.38h-4.5V52h-4.87V46.25l-5-2.25-4.5,2.12V52H291.5v9.75h-9.62v2.63h-4.5V113h-2.76V89.38h-4.87V85.12h1.87V78.25l-3.37-1.87-3.75,1.87v6.87h1.88V89.5h-4.5V81.38H257V47H244V36H231.62V47H229.5v9.12h-8.38V66H219V17.25h-8.12V4.88l-5-4.88-4.76,4.88v12.5H193.5v3.24h-3.62V134.75h-18V107h-2.63V57.88h-3.5v-2.5H158.5V45h-4.25V39.31L151,36.94l-3.38,2.37v7.07h-3.74v9.24h-5.13v83.76h-3.13v-30.5h.76v-2.13h-3V101H124v5.75h-5.25v-6.06a3.57,3.57,0,0,0-3.69-2.94c-3.25,0-3.62,1.94-3.62,1.94s-.63-1.81-3.94-1.81a3.07,3.07,0,0,0-3.12,2.81v6.19h-2.13v1.74h1.13v44.13H99.62V108.62h1.13v-1.74H97.88v-6.13H88.75v5.37H83.12V99.88s-.62-2-3.5-2a3.86,3.86,0,0,0-3.5,2s-.5-2.07-3.43-2.07a4,4,0,0,0-3.31,1.94v7h-1.5v28.13H65.25V50.75h1V48.12H62.12V38.38H47.75V48H33.25v86.88H27V91.38h1v-2H24.5V82.12H13.62v7.26H8.88V85.25h1.24v-7l-3.24-2-4,2.25v6.88H4.12V89.5H0v77.75H739.87" />
+                        </g>
+                    </g>
+                </svg>
+                <img class="restaurant" src="./img/restaurant.png">
+                <img class="bar" src="./img/bar.png">
+                <img class="restaurant_1" src="./img/restaurant-1.png">
+            </div>
+            <div class="slide">
+                <h1 class="ocean">Bis ans Meer...</h1>
+                <p>Oder auch: Von Meer zu Meer. Weil es einen über viele tausende Kilometer trägt. </p>
+                <p>Von Freiburg bis ans Mittelmeer. Oder einmal durch die Pyrenäen - von Mittelmeer bis zum Atlantik.
+                </p>
+
+                <svg id="ocean-tour" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1383.25 105.97">
+                    <defs></defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <path class="path"
+                                d="M.09,105c35.86-3.2,63.77-56,111-74s68,8,129-11c63.56-19.8,123-29,153-3s116,47,193,32,122-25,203-26,137,77,206,58,72-59,172-26,111,1,126-18,90-31,90-31" />
+                        </g>
+                    </g>
+                </svg>
+                <div class="circle-ocean" id="circle-san"></div>
+                <div class="circle-ocean" id="circle-nar"></div>
+            </div>
+            <div class="slide country-slide">
+                <h1 class="country">Über Stadt- und Landesgrenzen hinaus.</h1>
+                <p>Weil es einen ganz unaufgeregt und unkompliziert durch ganz Europa, über viele grüne Grenzen trägt.
+                </p>
+
+                <div class="circle" id="circle1"></div>
+                <div class="circle" id="circle2"></div>
+                <div class="circle" id="circle3"></div>
+                <div class="circle" id="circle4"></div>
+                <div class="circle" id="circle5"></div>
+                <div class="circle" id="circle6"></div>
+                <div class="circle" id="circle7"></div>
+
+            </div>
+            <div class="slide">
+                <h1 class="bikepacking font-mountain">Über die höchsten Berge.</h1>
+                <p class="font-mountain">Weil das Fahrrad auch bepackt mit vollem Gepäck über jeden Pass fährt.
+                    Unterstützt durch eigene Muskelkraft natürlich.</p>
+                <svg class="img-mountain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 643.79 310.84">
+                    <defs>
+                        <style>
+                            .mountain {
+                                fill: #d34a46;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="OBJECTS">
+                            <path class="mountain"
+                                d="M574.09,174.54h-1.71l-5.35-.07-14.7-17.81-4.56.37-13.83-8.71-7.39.33-18.93-17.7,3.16-7.59-9.64-11.2-9.29-1.4-.67-3.24-4.64-1.45-7.87-15.92-5.54-14.87-1.7-9.13-10-4.94-1.9-2.11-5.4-6L435.92,73.16l-12.56,6.4-13.06,18,7.62,14.13,24.68,19,2.08,4.69,6.54,3.65L457,150.88l10.27,5.48,13.1,14.28-19.81-10.32,1,3.16,2.88,6.84-6.62-5.23-6.61-1.61,10,18.85-16.38-15.65L437,154.42l-5.13-4-.24,4.15-23.82-26.09-7.71-1.9L391.5,120l-8.23-14.09-8.95-9.54-5.09.44-11.55-8.53,5.78,11.12L352.71,92l1.92,6.36L339,90l.9-6.59-2.5-5.86-1.75.67,2.46-8.12-2.8,2.77L334.76,67l-3.91-1.35,3.13-1-.34-11.36L320.56,44.3l-1.05,7.39-4,5.11,1.37-11.6,2.77-4.72-2.92-2.21-3,3.46-7.71-11.09L312,13.72,309.61,15l.32-8.88L306.73,9l-5,9.78-15.07,20-12,8.42L266.9,64h0l-1.14,2.45L253.42,86.67l-18,14.47-8.15,11,12.86,11.2,20.6-9.42q7.48,5.67,14.95,11.36L327.24,163l25.59,13.65,14.57-.33,50.35,38.92,16.8,13,4.72-1.9,3.66,3.35,10.59,3.82,9.81,5.63,17.72-15.08,6.23-13.52,15.36,22.65,4.55-2.12,4.56,6,10.52-8.41,5.34-9.33,3.69.38,3.45-4,4.8,1.65,9.65,14.45,10.32,6.44,5,7,3.73-7.54,3.13,2.85,5.72.4,3.25,4.33,1.95.34.35-2.55,2.93,4.44,2.07-.77,56.13-21Zm-111-58.79,2.76-7.68,2.9-4,3.84.79ZM314.37,82.09l-3.92-7.19-4.05-4.22-1.83,3,.85,7.8-7.17-6.24L293.5,85.71l-.44-4.06,3.88-8.59L297,68l-6.13-8.81,1-7.76L297.84,40l8.27,8.28.33,5,4.21,5.08,1,8.79L316,74.38Zm38,42.14-10.49-5.52-5.08-3.5-4,.82-6.57-5.78-4.44-1.66-.41-2.7-2-2.75,5.75-11.21-.05-9.4,5.48-5.73-2.87,7.41,2.09,3.47,4.26,10.63L337,99.45l9.31,10.3.64,3.75,7.68,8,10.26,10.42Zm149,2.21,4.13-4.28-4.13,8.9ZM503.76,183l-3-1.75-3.46-6.15-5.52-1,1.86,5.63L490,178.2l-5,2.59,3.86-4.76-.76-4.24,10.37-4,15.6,24.33Zm34.08,24.4-7.05-4.54,6.79,2.47L528,195.52l13.22,7.67,8.87,10.86Z" />
+                            <path class="mountain"
+                                d="M585.59,247.54,539,265l-29.29,4.84L466.15,280l-54,16.37-52.63-11.52-18.16,8.64-11.6-11.36-71.87,28.75-92.49-45L120,277.75l-17.68-8.16-15.28,4.67-13.72-7.93-20.51,5.92-13.64-7.17L24,268.33s-24.4-2.43-24-2.78c5.29-2.29,10.63-4.52,16-6.64L20.62,249l28.84-19L66,203.94l26.59-31.36,13.17.2,8.23-5.09,32.21-35.92,7.62,0,33.5-33.18,2.2,54.83,11.18,42.16,23,18.81-4.88-35.66-11.19-10.06L193,144l22,18.82-15.18-32.42,12.48,11.69-5.83-14.34-8.47-12.93,5.88,3.93,3.7-2.15,2.56,1.07,4.1-2.4,8.94-5.2,3.69,17.85,5.12,4.79,8.2-9.34,20.6-9.42c-.22.49-.29,20.76-.29,20.76l25.74,31.45,3.27,18.74,0,.24-4.91,17L307,217.84l-.81-17.63L300.51,195,291,177.23l13.79,12.25-13.41-35.1L290,144.31,316.47,171l12.71,13.17,24.48,17.74L346.46,183l12.7-.93L366,183.9l30.81,26.89-8.07-14.11,29,18.6,16.8,13,4.72-1.9,3.66,3.35,10.59,3.82,9.81,5.63,17.72-15.08,6.23-13.52,15.36,22.65,4.55-2.12,4.56,6,10.52-8.41,5.34-9.33,3.69.38,3.45-4,4.8,1.65,9.65,14.45,10.32,6.44,5,7,3.73-7.54,3.13,2.85,5.72.4,3.25,4.33,1.95.34.35-2.55Z" />
+                            <path class="mountain"
+                                d="M464.36,170.32l-2.88-6.84-1-3.16,19.81,10.32-13.1-14.28L457,150.88,451.22,139l-6.54-3.65-2.08-4.69-24.68-19L410.3,97.55,400.35,79l-7.2-8.28-7.56-15.92-18-13.06-10-13.42L348.88,14.6,327.53,0l-.38,6,7.51,4.51.66,9,.88,3.72,2.56,4-4-.31-1-3.64L321.87,10.41,317,9.06h0l-2.1-.59-4.88-2.39L309.61,15,312,13.72l-5.89,16.92,7.71,11.09,3-3.46,2.92,2.21-2.77,4.72-1.37,11.6,4-5.11,1.05-7.39,13.08,9.07L334,64.73l-3.13,1L334.76,67l.56,5.82,2.8-2.77-2.46,8.12,1.75-.67,2.5,5.86L339,90l15.62,8.35L352.71,92l10.75,7.45-5.78-11.12,11.55,8.53,5.09-.44,8.95,9.54L391.5,120l8.61,6.59,7.71,1.9,23.82,26.09.24-4.15,5.13,4,7.74,12.26,16.38,15.65-10-18.85,6.61,1.61ZM371.92,89l-21-20.07-4.52-10.55-8.78-8.14-5.25-10.3,8.82,6.26-3-7.75,10.9,8.16,8.55,11.32L372,70.25Z" />
+                            <polygon class="mountain"
+                                points="572.38 174.53 567.03 174.46 552.33 156.65 547.77 157.02 533.94 148.31 526.55 148.64 507.62 130.94 510.78 123.35 501.14 112.14 491.85 110.75 491.18 107.51 486.54 106.06 478.67 90.14 473.13 75.27 471.43 66.14 461.45 61.2 459.55 59.09 466.53 54.4 490.49 73.59 511.84 109.66 519.28 110.27 534.78 134.3 546.22 143.64 553.47 150.26 572.38 174.53" />
+                            <polygon class="mountain"
+                                points="338.76 27.28 334.77 26.97 333.8 23.33 321.87 10.41 316.95 9.06 327.53 0 327.15 6.03 334.67 10.54 335.32 19.56 336.19 23.28 338.76 27.28" />
+                            <polygon class="mountain"
+                                points="315.98 74.38 314.37 82.09 310.44 74.9 306.4 70.68 304.57 73.7 305.42 81.5 298.25 75.26 293.5 85.71 293.06 81.65 296.94 73.06 297 67.96 290.87 59.16 291.91 51.39 297.84 40.02 306.11 48.3 306.44 53.25 310.65 58.34 311.63 67.12 315.98 74.38" />
+                            <polygon class="mountain"
+                                points="364.84 131.91 352.41 124.23 341.92 118.71 336.84 115.21 332.87 116.03 326.3 110.25 321.86 108.59 321.45 105.89 319.44 103.14 325.19 91.93 325.14 82.53 330.62 76.8 327.75 84.21 329.84 87.68 334.1 98.31 336.95 99.45 346.25 109.75 346.9 113.5 354.58 121.49 364.84 131.91" />
+                            <polygon class="mountain"
+                                points="371.95 70.25 371.92 88.98 350.93 68.91 346.4 58.36 337.63 50.22 332.38 39.92 341.2 46.18 338.16 38.43 349.06 46.59 357.61 57.91 371.95 70.25" />
+                            <path class="mountain"
+                                d="M417.75,215.28,367.4,176.36l-14.57.33L327.24,163l-51.57-37.77q-7.47-5.68-14.95-11.36c-.22.49-.29,20.76-.29,20.76l25.74,31.45,3.27,18.74,0,.24-4.91,17L307,217.84l-.81-17.63L300.51,195,291,177.23l13.79,12.25-13.41-35.1L290,144.31,316.47,171l12.71,13.17,24.48,17.74L346.46,183l12.7-.93L366,183.9l30.81,26.89-8.07-14.11Z" />
+                            <polygon class="mountain"
+                                points="514.1 192.14 503.76 183 500.77 181.25 497.31 175.1 491.79 174.06 493.65 179.69 489.99 178.2 485.02 180.78 488.89 176.03 488.13 171.79 498.5 167.81 514.1 192.14" />
+                            <polygon class="mountain"
+                                points="550.11 214.05 537.84 207.4 530.78 202.86 537.58 205.33 528.02 195.52 541.24 203.19 550.11 214.05" />
+                            <polygon class="mountain" points="505.53 122.16 501.4 131.06 501.4 126.44 505.53 122.16" />
+                            <polygon class="mountain"
+                                points="472.55 104.83 463.05 115.75 465.81 108.07 468.71 104.04 472.55 104.83" />
+                            <polygon class="mountain"
+                                points="218.76 178.75 207.57 168.69 192.98 143.96 214.93 162.78 199.75 130.36 212.23 142.05 206.41 127.71 197.93 114.78 203.81 118.71 207.51 116.56 210.07 117.63 214.17 115.23 187.3 98.61 189.5 153.44 200.68 195.6 223.64 214.41 218.76 178.75" />
+                            <polygon class="mountain"
+                                points="266.9 63.99 265.76 66.44 253.42 86.67 235.41 101.14 227.26 112.13 240.12 123.33 231.92 132.67 226.8 127.88 223.11 110.03 236.1 91.07 266.9 63.99" />
+                        </g>
+                    </g>
+                </svg>
+                <div class="bag-wrapper-back font-mountain">
+                    <img id="bike-bag01" src="./img/bike_bag01.png" />
+                    <img id="bike-bag03" src="./img/bike_bag03.png" />
+
+
+                </div>
+
+                <div class="bag-wrapper-front font-mountain">
+                    <img id="bike-bag02" src="./img/bike_bag02.png" />
+
+                    <img id="garmin" src="./img/garmin.png" />
+
+                </div>
+
+                <button onclick="toggleOverlay()" class="btn-mountain" id="btn-mountain-open">Zu den Erfolgen!</button>
+                <overlay id="overlay-mountain">
+                    <h1 class="title-overlay">Die höchsten Alpenpässe</h1>
+                    <div class="overlay-table" role="region" tabindex="0">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Col de l’Iseran</td>
+                                    <td>2770 m</td>
+                                    <td>🇫🇷</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Stilfser Joch</td>
+                                    <td>2758 m</td>
+                                    <td>🇮🇹</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Col d’Agnel</td>
+                                    <td>2744 m</td>
+                                    <td>🇫🇷/🇮🇹</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Col de la Bonette</td>
+                                    <td>2715 m</td>
+                                    <td>🇫🇷</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Col du Galibier</td>
+                                    <td>2642 m</td>
+                                    <td>🇫🇷</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Passo di Gavia</td>
+                                    <td>2621 m</td>
+                                    <td>🇮🇹</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Col d’Izoard</td>
+                                    <td>2360 m</td>
+                                    <td>🇫🇷</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Col du Tourmalet</td>
+                                    <td>2115 m</td>
+                                    <td>🇫🇷</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button onclick="toggleOverlay()" class="btn-mountain" id="btn-mountain-close">Genug
+                        gefeiert!</button>
+                </overlay>
+            </div>
+            <div class="slide">
+                <h1 class="weather">Bei Wind und Wetter.</h1>
+                <p>Weil es einen auch bei Regen, Hitze oder Minusgraden überall hinfährt.</p>
+                <div class="parent">
+                    <div class="div1"> 40° </div>
+                    <div class="div2"> </div>
+                    <div class="div3"> 4°</div>
+                    <div class="div4"> </div>
+                    <div class="div5"> </div>
+                    <div class="div6"> Sturm </div>
+                    <div class="div7"> </div>
+                    <div class="div8"> Regen </div>
+                    <div class="div9"> </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h1 class="end">Want to continue the journey?</h1>
+                <p id="end">Neugierig geworden? Dann schau dich hier doch noch ein bisschen weiter um.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
