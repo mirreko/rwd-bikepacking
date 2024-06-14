@@ -25,7 +25,7 @@ document.querySelector('.container').addEventListener('scroll', () => {
   const totalFrames = bikeLottie.getLottie().totalFrames;
 
   // Den aktuellen Frame basierend auf dem Scrollprozentsatz setzen
-  const currentFrame = Math.round(scrollPercent * totalFrames);
+  const currentFrame = Math.round((scrollPercent * totalFrames * 4) % totalFrames);
 
   bikeLottie.getLottie().goToAndStop(currentFrame, true);
 });
@@ -74,3 +74,59 @@ function openCanvas() {
   
 }
 
+function toggleOcean() {
+  console.log("clicked");
+  var ocean = document.getElementById("bg-waves");
+  var beach = document.getElementById("bg-sand");
+  var foam = document.getElementById("bg-foam");
+  var duck = document.getElementById("duck-wrapper");
+  var nar = document.getElementById("circle-nar");
+  var san = document.getElementById("circle-san");
+  var path = document.getElementById("ocean-tour");
+  var bike = document.getElementById("bikeLottie");
+
+  if (ocean.style.display === "none") {
+    ocean.style.display = "block";
+    beach.style.display = "block";
+    foam.style.display = "block";
+    duck.style.display = "block";
+    nar.style.display = "none";
+    san.style.display = "none";
+    path.style.display = "none";
+    bike.style.display = "none";
+  } else {
+    ocean.style.display = "none";
+    beach.style.display = "none";
+    foam.style.display = "none";
+    duck.style.display = "none";
+    nar.style.display = "block";
+    san.style.display = "block";
+    path.style.display = "block";
+    bike.style.display = "block";
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const duckWrapper = document.getElementById('duck-wrapper');
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
+  const lerpFactor = 0.1; // Faktor für die Verzögerung
+
+  document.addEventListener('mousemove', (event) => {
+      mouseX = event.clientX - duckWrapper.offsetWidth / 2;
+      mouseY = event.clientY - duckWrapper.offsetHeight / 2;
+  });
+
+  function animate() {
+      // Interpolation der aktuellen Position zur Zielposition (Mausposition)
+      currentX += (mouseX - currentX) * lerpFactor;
+      currentY += (mouseY - currentY) * lerpFactor;
+
+      duckWrapper.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+      requestAnimationFrame(animate);
+  }
+
+  // Start der Animation
+  animate();
+});

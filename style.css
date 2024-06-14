@@ -138,36 +138,43 @@ p {
 }
 
 .slide:nth-child(1) {
-    background-color: #90C061;
+    background-color: #79BF45;
     z-index: -1;
 }
 
 .slide:nth-child(2) {
     background-color: #b8d8d8;
+    z-index: 1;
 }
 
 .slide:nth-child(3) {
     background-color: #4F6367;
+    z-index: 2; 
 }
 
 .slide:nth-child(4) {
     background-color: #F5B700;
+    z-index: 3;
 }
 
 .slide:nth-child(5) {
     background-color: #7A9E9F;
+    z-index: 4;
 }
 
 .slide:nth-child(6) {
     background-color: #FE5F55;
+    z-index: 5;
 }
 
 .slide:nth-child(7) {
     background-color: #D9D9D9;
+    z-index: 6;
 }
 
 .slide:nth-child(8) {
     background-color: #313131;
+    z-index: 7;
 }
 
 .img-city {
@@ -241,6 +248,22 @@ p {
     stroke-miterlimit: 10;
     stroke-width: 2px;
     margin-top: 500;
+}
+
+.btn-ocean {
+    background-color: #303136;
+    color: white;
+    width: fit-content;
+    padding: 15px 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    z-index: 30;
+    margin-top: 100px;
 }
 
 .country-slide {
@@ -536,6 +559,85 @@ table tbody tr:nth-of-type(6) td:nth-of-type(2) {
         display: none;
     }
 
+    #bg-waves {
+        display: none;
+        height: 110vh;
+        width: 100vw;
+        z-index: 20;
+        background: linear-gradient(to right, #96DED2, #C0ECDC);
+        margin-top: -450px;
+        
+    }
+
+    #bg-waves::after {
+        display: block;
+        content: "";
+        background: url(./img/water-texture.svg);
+        height: 200vh;
+        width: 100vw;
+        animation: water-moving 10s linear infinite;
+        
+    }
+
+    @keyframes water-moving {
+        0%, 100% {
+            transform: translateY(-4%);
+        }
+        50% {
+            transform: scaleY(.9) translate(0);
+        }
+    }
+
+    #bg-foam {
+        display: none;
+        bottom: 0;
+        height: 18.75rem;
+        width: 100vw;
+        z-index: 20;
+        margin-top: -350px;
+        background-color: #f3f2f1;
+        
+        animation: seafoam 10s linear infinite;
+    }
+
+    @keyframes seafoam {
+        0%, 100% {
+            clip-path: path("M 0 300 L 0 60 C 450 120 500 30 650 130 C 750 230 850 130 1200 330");
+        }
+        50% {
+            clip-path: path("M 0 300 L 0 120 C 450 200 500 60 650 160 C 750 240 850 120 1300 340");
+        }
+    }
+
+    #bg-sand {
+        display: none;
+        bottom: 0;
+        height: 18.75rem;
+        left: 0;
+        width: 100vw;
+        margin-top: -300px;
+        background-color: #F5B700;
+        animation: sand 10s linear infinite;
+    }
+
+    @keyframes sand {
+        0%, 100% {
+            clip-path: path("M 0 300 L 0 100 C 450 125 500 50 650 150 C 750 250 850 150 1200 350");
+        }
+        50% {
+            clip-path: path("M 0 300 L 0 160 C 450 220 500 140 650 220 C 750 260 850 110 1200 350");
+        }
+    }
+
+    #duck-wrapper {
+        display: none;
+        z-index: 30;
+        margin-top: -800px;
+        width: 100px;
+        height: 100px;
+        pointer-events: none;
+    }
+
     .circle {
         border-radius: 50%;
         background-color: #3F4F51;
@@ -679,6 +781,7 @@ table tbody tr:nth-of-type(6) td:nth-of-type(2) {
     }
 
     #circle-nar {
+        display: block;
         width: 20px;
         height: 20px;
         z-index: 40;
@@ -687,6 +790,7 @@ table tbody tr:nth-of-type(6) td:nth-of-type(2) {
     }
 
     #circle-nar::after {
+        display: block;
         content: "Narbonne";
         font-family: "Poppins", sans-serif;
         font-weight: 400;
@@ -963,6 +1067,7 @@ table tbody tr:nth-of-type(6) td:nth-of-type(2) {
     }
 
     #ocean-tour {
+        display: block;
         margin: 20px;
         margin-top: 250px;
         position: relative;

@@ -31,9 +31,7 @@
 
 <body>
     <div id="bike-wrapper">
-        <lottie-player class="bike" id="bikeLottie"
-            src="https://lottie.host/1477a825-7d4f-4c39-8530-a2174f5cd0ab/wRtq1xtKm9.json" background="transparent"
-            speed="1" loop autoplay></lottie-player>
+        <lottie-player class="bike" id="bikeLottie" src="https://lottie.host/0638485c-a30e-4941-979b-672de78e5e88/SV6yNUwnwR.json" background="transparent" speed="1"></lottie-player>
     </div>
     <div id="bike-top-wrapper">
         <img id="bike-top" src="./img/bike_top.png">
@@ -42,6 +40,7 @@
 
         <div class="wrapper">
             <div class="slide">
+                
                 <div id="street-top">
                     <svg width="100%" height="100%">
                         <!-- Linke Straßenlinie -->
@@ -54,6 +53,7 @@
                         <line x1="50%" y1="0" x2="50%" y2="1000" stroke="white" stroke-width="10"
                             stroke-dasharray="100" />
                     </svg>
+                    
                 </div>
                 <h1 class="start">Lets go for a ride.</h1>
                 <p>Das Fahrrad - Warum das Fahrrad mein Lieblingsort ist. Eine kurze Erklärung am Beispiel des
@@ -96,9 +96,8 @@
                 </svg>
                 <div id="color-block"></div>
                 <div id="color-block-down"></div>
-                <dotlottie-player onclick="openCanvas()" class="lottie-arrow"
-                    src="https://lottie.host/9939512b-2bf8-485c-8de2-f85f340ec850/SrdiUni5Uz.json" background="transparent"
-                    speed="1" loop autoplay></dotlottie-player>
+                <lottie-player onclick="openCanvas()" class="lottie-arrow" src="https://lottie.host/a1801d56-972e-40d6-9175-54436a305712/glJwye9VcI.json" background="transparent" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+                
                 <button onClick="openCanvas()" class="btn-lable open-canvas"> Klick mich! </button>
                 </a>
             </div>
@@ -156,6 +155,16 @@
                 </svg>
                 <div class="circle-ocean" id="circle-san"></div>
                 <div class="circle-ocean" id="circle-nar"></div>
+                <button onClick="toggleOcean()" class="btn-ocean">Zur Abkühlung</button>
+                
+                <div class="ocean-wrapper">
+                    <div class="bg-waves" id="bg-waves"></div>
+                    <div class="bg-foam" id="bg-foam"></div>
+                    <div class="bg-sand" id="bg-sand"></div>
+                    <div id="duck-wrapper">
+                        <lottie-player id="duckLottie" src="https://lottie.host/723c4f43-fcf4-4378-8ae6-ee08f2daf558/AdhaVLA6tP.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                </div>
             </div>
             <div class="slide country-slide">
                 <h1 class="country">Über Stadt- und Landesgrenzen hinaus.</h1>
