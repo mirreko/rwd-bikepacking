@@ -31,7 +31,6 @@ document.querySelector('.container').addEventListener('scroll', () => {
 });
 
 
-
 function toggleOverlay() {
   console.log("clicked");
   var overlay = document.getElementById("overlay-mountain");
@@ -44,6 +43,55 @@ function toggleOverlay() {
     bike.style.display = "block";
   }
 }
+
+
+var currentImageIndex = 1;
+var intervalId;
+
+function showImage(index) {
+  var allImages = document.querySelectorAll('.gallery-image');
+  allImages.forEach(function(image, i) {
+    image.style.display = "none";
+  });
+
+  var currentImage = document.getElementById('image' + index);
+  currentImage.style.display = "block";
+}
+
+function startImageRotation() {
+  intervalId = setInterval(function() {
+    currentImageIndex = (currentImageIndex % 7) + 1; 
+    showImage(currentImageIndex);
+  }, 5000);
+}
+
+function stopImageRotation() {
+  clearInterval(intervalId);
+}
+
+function togglePOV(buttonId) {
+  console.log("clicked button " + buttonId);
+
+  var pov = document.getElementById("gallery-wrapper");
+  var btn = document.getElementById("btn-pov-close");
+  var bike = document.getElementById("bikeLottie");
+
+  if (pov.style.display === "none") {
+    pov.style.display = "block";
+    btn.style.display = "block";
+    bike.style.display = "none";
+    currentImageIndex = buttonId;
+    showImage(currentImageIndex);
+    startImageRotation();
+  } else {
+    pov.style.display = "none";
+    btn.style.display = "none";
+    bike.style.display = "block";
+    stopImageRotation();
+  }
+}
+
+
 
 function closeCanvas() {
   var colorBlock = document.getElementById("color-block-down");
@@ -84,25 +132,31 @@ function toggleOcean() {
   var san = document.getElementById("circle-san");
   var path = document.getElementById("ocean-tour");
   var bike = document.getElementById("bikeLottie");
+  var btnClose = document.getElementById("btn-ocean-close");
+  var btnOpen = document.getElementById("btn-ocean-open");
 
   if (ocean.style.display === "none") {
     ocean.style.display = "block";
     beach.style.display = "block";
     foam.style.display = "block";
     duck.style.display = "block";
+    btnClose.style.display = "block";
     nar.style.display = "none";
     san.style.display = "none";
     path.style.display = "none";
     bike.style.display = "none";
+    btnOpen.style.display = "none";
   } else {
     ocean.style.display = "none";
     beach.style.display = "none";
     foam.style.display = "none";
     duck.style.display = "none";
+    btnClose.style.display = "none";
     nar.style.display = "block";
     san.style.display = "block";
     path.style.display = "block";
     bike.style.display = "block";
+    btnOpen.style.display = "block";
   }
 }
 

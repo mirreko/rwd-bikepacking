@@ -70,6 +70,13 @@
                         <line x1="0" y1="125" x2="100%" y2="125" stroke="white" stroke-width="10"
                             stroke-dasharray="100" />
                     </svg>
+                    <div class="flower">
+                        <div class="petal petal1"></div>
+                        <div class="petal petal2"></div>
+                        <div class="petal petal3"></div>
+                        <div class="petal petal4"></div>
+                        <div class="center"></div>
+                    </div>
                 </div>
 
 
@@ -155,7 +162,8 @@
                 </svg>
                 <div class="circle-ocean" id="circle-san"></div>
                 <div class="circle-ocean" id="circle-nar"></div>
-                <button onClick="toggleOcean()" class="btn-ocean">Zur Abkühlung</button>
+                <button onClick="toggleOcean()" class="btn-ocean" id="btn-ocean-open">Zur Abkühlung</button>
+                <button onClick="toggleOcean()" class="btn-ocean" id="btn-ocean-close">Weiter gehts</button>
                 
                 <div class="ocean-wrapper">
                     <div class="bg-waves" id="bg-waves"></div>
@@ -170,15 +178,26 @@
                 <h1 class="country">Über Stadt- und Landesgrenzen hinaus.</h1>
                 <p>Weil es einen ganz unaufgeregt und unkompliziert durch ganz Europa, über viele grüne Grenzen trägt.
                 </p>
-
-                <div class="circle" id="circle1"></div>
-                <div class="circle" id="circle2"></div>
-                <div class="circle" id="circle3"></div>
-                <div class="circle" id="circle4"></div>
-                <div class="circle" id="circle5"></div>
-                <div class="circle" id="circle6"></div>
-                <div class="circle" id="circle7"></div>
-
+                <div onClick="togglePOV(1)" class="circle" id="circle1"></div>
+                <div onClick="togglePOV(2)" class="circle" id="circle2"></div>
+                <div onClick="togglePOV(3)" class="circle" id="circle3"></div>
+                <div onClick="togglePOV(4)" class="circle" id="circle4"></div>
+                <div onClick="togglePOV(5)" class="circle" id="circle5"></div>
+                <div onClick="togglePOV(6)" class="circle" id="circle6"></div>
+                <div onClick="togglePOV(7)" class="circle" id="circle7"></div>
+                
+                
+                <div id="gallery-wrapper">
+                        <img id="image1" class="gallery-image" src="./img/gallery/Oxford.jpg">
+                        <img id="image2" class="gallery-image" src="./img/gallery/Westfalen_2.jpg">
+                        <img id="image3" class="gallery-image" src="./img/gallery/Schwarzwald.jpg">
+                        <img id="image4" class="gallery-image" src="./img/gallery/Venedig.jpg">
+                        <img id="image5" class="gallery-image" src="./img/gallery/FinaleLigure.jpg">
+                        <img id="image6" class="gallery-image" src="./img/gallery/Pyrenäen.jpg">
+                        <img id="image7" class="gallery-image" src="./img/gallery/SanSebastian.jpg">
+                        <img id="handle-bar" src="./img/handle-bars.png">
+                        <button onClick="togglePOV()" class="btn-pov" id="btn-pov-close">Schließen</button>
+                </div>
             </div>
             <div class="slide">
                 <h1 class="bikepacking font-mountain">Über die höchsten Berge.</h1>
